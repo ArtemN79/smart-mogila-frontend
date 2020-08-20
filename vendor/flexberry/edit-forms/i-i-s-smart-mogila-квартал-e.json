@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Кладбище",
+      "projection": "КладбищеL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Квартал",
+  "name": "IISSmartMogilaКварталE",
+  "className": "КварталE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-smart-mogila-квартал",
+      "modelProjection": "КварталE"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Квартал",
+      "projection": "КварталL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Захоронение",
+  "name": "IISSmartMogilaЗахоронениеE",
+  "className": "ЗахоронениеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-smart-mogila-захоронение",
+      "modelProjection": "ЗахоронениеE"
+    }
+  ]
+}

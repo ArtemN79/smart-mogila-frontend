@@ -1,0 +1,150 @@
+<h3 class="ui header">{{t "forms.i-i-s-smart-mogila-захоронение-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.инвНомер
+      class=(if (v-get validationObject "инвНомер" "isInvalid") "error")
+      label=(t "forms.i-i-s-smart-mogila-захоронение-e.инвНомер-caption")
+      data-test-i-i-s-smart-mogila-захоронение-e---------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "инвНомер" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИО
+      class=(if (v-get validationObject "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-smart-mogila-захоронение-e.фИО-caption")
+      data-test-i-i-s-smart-mogila-захоронение-e----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "фИО" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.датаРождения-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.датаРождения
+      class=(if (v-get validationObject "датаРождения" "isInvalid") "error")
+      data-test-i-i-s-smart-mogila-захоронение-e-------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "датаРождения" "messages")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.датаСмерти-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.датаСмерти
+      class=(if (v-get validationObject "датаСмерти" "isInvalid") "error")
+      data-test-i-i-s-smart-mogila-захоронение-e-----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "датаСмерти" "messages")}}
+  </div>
+
+  <div class="field" data-test-i-i-s-smart-mogila-захоронение-e---------------------="true">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.состояниеЗахоронения-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-smart-mogila-состояние-захоронения")
+      value=model.состояниеЗахоронения
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "состояниеЗахоронения" "messages")}}
+  </div>
+  <div class="field" data-test-i-i-s-smart-mogila-захоронение-e-------------------="true">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.состояниеНадгробия-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-smart-mogila-состояние-захоронения")
+      value=model.состояниеНадгробия
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "состояниеНадгробия" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.наличиеОграды-caption"}}</label>
+    {{flexberry-checkbox
+      readonly=readonly
+      value=model.наличиеОграды
+      data-test-i-i-s-smart-mogila-захоронение-e--------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "наличиеОграды" "messages")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.фото-caption"}}</label>
+    {{flexberry-file
+      readonly=readonly
+      value=model.фото
+      class=(if (v-get validationObject "фото" "isInvalid") "error")
+      label=(t "forms.i-i-s-smart-mogila-захоронение-e.фото-caption")
+      data-test-i-i-s-smart-mogila-захоронение-e-----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "фото" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.координатыЗахоронения
+      class=(if (v-get validationObject "координатыЗахоронения" "isInvalid") "error")
+      label=(t "forms.i-i-s-smart-mogila-захоронение-e.координатыЗахоронения-caption")
+      data-test-i-i-s-smart-mogila-захоронение-e----------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "координатыЗахоронения" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-smart-mogila-захоронение-e.квартал-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.квартал
+      relationName="квартал"
+      projection="КварталL"
+      title=(t "forms.i-i-s-smart-mogila-захоронение-e.квартал-caption")
+      readonly=readonly
+      componentName="кварталLookup"
+      data-test-i-i-s-smart-mogila-захоронение-e--------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "квартал" "messages")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.квартал.номер
+      class=(if (v-get validationObject "квартал.номер" "isInvalid") "error")
+      label=(t "forms.i-i-s-smart-mogila-захоронение-e.квартал.номер-caption")
+      data-test-i-i-s-smart-mogila-захоронение-e--------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "квартал.номер" "messages")}}
+  </div>
+</form>

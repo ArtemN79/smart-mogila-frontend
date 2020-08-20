@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "IIS.SmartMogila",
+  "className": "СостояниеНадгробия",
+  "enumObjects": {
+    "Отсутствует": null,
+    "Плохое": null,
+    "Хорошее": null
+  }
+}

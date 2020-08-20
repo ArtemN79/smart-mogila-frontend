@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Smart mogila",
+  "applicationTitle": "Smart mogila",
+  "items": [
+    {
+      "link": null,
+      "menuName": "smart-mogila",
+      "caption": "SmartMogila",
+      "title": "SmartMogila",
+      "children": [
+        {
+          "link": "i-i-s-smart-mogila-кладбище-l",
+          "menuName": null,
+          "caption": "Кладбище",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-smart-mogila-захоронение-l",
+          "menuName": null,
+          "caption": "Захоронение",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-smart-mogila-квартал-l",
+          "menuName": null,
+          "caption": "Квартал",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

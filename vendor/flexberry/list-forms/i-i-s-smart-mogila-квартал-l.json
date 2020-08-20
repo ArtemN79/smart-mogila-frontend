@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-smart-mogila-квартал-e",
+  "editForm": "i-i-s-smart-mogila-квартал-e",
+  "external": false,
+  "caption": "Квартал",
+  "name": "IISSmartMogilaКварталL",
+  "className": "КварталL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-smart-mogila-квартал",
+      "modelProjection": "КварталL"
+    }
+  ]
+}
